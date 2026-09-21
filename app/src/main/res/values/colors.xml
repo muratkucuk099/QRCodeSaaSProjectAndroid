@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    iOS `AppColor.swift` paletinin birebir karşılığı (light mod değerleri).
+    Karanlık mod karşılıkları values-night/colors.xml içinde.
+-->
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Marka -->
+    <color name="primary">#22223B</color>
+    <color name="primary_subtle">#E9E7E3</color>
+
+    <!-- Yüzeyler -->
+    <color name="screen_background">#F6F5F3</color>
+    <color name="secondary_background">#EFEDE9</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="elevated_surface">#FFFFFF</color>
+    <color name="image_placeholder">#ECEAE5</color>
+
+    <!-- Metin -->
+    <color name="primary_text">#1A1A1C</color>
+    <color name="secondary_text">#6B6A66</color>
+    <color name="tertiary_text">#99968F</color>
+    <color name="inverse_text">#FFFFFF</color>
+
+    <!-- Kenarlık -->
+    <color name="border">#E6E3DD</color>
+    <color name="separator">#E6E3DD</color>
+
+    <!-- Durum renkleri -->
+    <color name="success">#1B7A4B</color>
+    <color name="success_subtle">#E4F2EA</color>
+    <color name="warning">#9A5B00</color>
+    <color name="warning_subtle">#FBEEDC</color>
+    <color name="error">#B3261E</color>
+    <color name="error_subtle">#FAE9E8</color>
+
+    <!-- Sabitler -->
+    <color name="qr_scanner_scrim">#99000000</color>
+    <color name="side_menu_scrim">#59000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

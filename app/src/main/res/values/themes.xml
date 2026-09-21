@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<!--
+    iOS `AppAppearance.swift` karşılığı.
+    Material 3 tabanlı, iOS'un sade/Apple-style dilini koruyacak şekilde ayarlandı:
+    gölge yok, ayırıcı çizgi yok, düşük kontrastlı kenarlıklar.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.SAASProject" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Base.Theme.Kumbaram" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Marka renkleri -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/inverse_text</item>
+        <item name="colorPrimaryContainer">@color/primary_subtle</item>
+        <item name="colorOnPrimaryContainer">@color/primary</item>
+
+        <item name="colorSecondary">@color/primary</item>
+        <item name="colorOnSecondary">@color/inverse_text</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/inverse_text</item>
+        <item name="colorErrorContainer">@color/error_subtle</item>
+
+        <!-- Yüzeyler -->
+        <item name="android:colorBackground">@color/screen_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+        <item name="colorSurfaceVariant">@color/secondary_background</item>
+        <item name="colorOnSurfaceVariant">@color/secondary_text</item>
+        <item name="colorOutline">@color/border</item>
+        <item name="colorOutlineVariant">@color/separator</item>
+
+        <!-- Sistem çubukları: iOS'taki kenarsız görünüme yakın durmak için arka planla aynı -->
+        <item name="android:statusBarColor">@color/screen_background</item>
+        <item name="android:navigationBarColor">@color/screen_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Tipografi -->
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.Kumbaram.LargeTitle</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.Kumbaram.Title1</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.Kumbaram.Title2</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.Kumbaram.Title3</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.Kumbaram.Body</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.Kumbaram.Subheadline</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.Kumbaram.Button</item>
+
+        <!-- Bileşen varsayılanları -->
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Kumbaram.AlertDialog</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Kumbaram.BottomSheet</item>
+    </style>
+
+    <style name="Theme.Kumbaram" parent="Base.Theme.Kumbaram" />
+
+    <!-- QR tarayıcı tam ekran koyu tema (kamera önizlemesi üzerinde beyaz kontroller) -->
+    <style name="Theme.Kumbaram.QrScanner" parent="Base.Theme.Kumbaram">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorOnSurface">@color/white</item>
+    </style>
+
+    <style name="ThemeOverlay.Kumbaram.AlertDialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.Kumbaram</item>
+        <item name="colorSurface">@color/elevated_surface</item>
+        <item name="colorOnSurface">@color/primary_text</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Kumbaram.Button.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Kumbaram.Button.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Kumbaram.Button.Dialog</item>
+    </style>
+
+    <style name="MaterialAlertDialog.Kumbaram" parent="MaterialAlertDialog.Material3">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Kumbaram.Dialog</item>
+    </style>
+
+    <style name="ShapeAppearance.Kumbaram.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/radius_lg</item>
+    </style>
+
+    <style name="ThemeOverlay.Kumbaram.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.Kumbaram.BottomSheet</item>
+    </style>
+
+    <style name="Widget.Kumbaram.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">@color/screen_background</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Kumbaram.BottomSheet</item>
+    </style>
+
+    <style name="ShapeAppearance.Kumbaram.BottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/radius_xl</item>
+        <item name="cornerSizeTopRight">@dimen/radius_xl</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
 </resources>

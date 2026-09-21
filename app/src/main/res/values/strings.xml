@@ -1,3 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Tüm kullanıcıya görünen metinler. iOS uygulamasındaki Türkçe metinlerin birebir karşılığı.
+    Kod içine sabit metin gömülmez; İngilizce eklenmek istendiğinde values-en/strings.xml
+    oluşturmak yeterli olacak şekilde yapılandırıldı.
+-->
 <resources>
-    <string name="app_name">SAASProject</string>
+    <string name="app_name">Kumbaram</string>
+    <string name="brand_name">kumbaram</string>
+
+    <!-- region Genel -->
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+    <string name="dismiss">Vazgeç</string>
+    <string name="close">Kapat</string>
+    <string name="save">Kaydet</string>
+    <string name="edit">Düzenle</string>
+    <string name="delete">Sil</string>
+    <string name="send">Gönder</string>
+    <string name="continue_action">Devam Et</string>
+    <string name="confirm">Onayla</string>
+    <string name="retry">Tekrar Dene</string>
+    <string name="copy">Kopyala</string>
+    <string name="loading">Yükleniyor...</string>
+    <string name="empty_value">—</string>
+    <string name="generic_error_title">Bir sorun oluştu</string>
+    <string name="error_title">Hata</string>
+    <string name="success_title">Başarılı</string>
+    <string name="no_connection">Bağlantını kontrol edip tekrar dene.</string>
+    <!-- endregion -->
+
+    <!-- region Giriş -->
+    <string name="login_email_hint">E-posta</string>
+    <string name="login_password_hint">Şifre</string>
+    <string name="login_action">Giriş Yap</string>
+    <string name="login_forgot_password">Şifremi Unuttum</string>
+    <string name="login_google">Google ile Giriş Yap</string>
+    <string name="login_sign_up">Kayıt Ol</string>
+    <string name="login_empty_credentials">E-posta ve şifre boş olamaz</string>
+    <string name="login_google_unavailable">Google ile giriş şu anda kullanılamıyor. Lütfen e-posta ve şifrenizle giriş yapın.</string>
+    <string name="login_google_failed">Google ile giriş tamamlanamadı. Tekrar deneyin.</string>
+    <string name="login_invalid_credentials">E-posta veya şifre hatalı.</string>
+    <string name="login_user_disabled">Bu hesap devre dışı bırakılmış.</string>
+    <string name="login_too_many_requests">Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="sign_up_email_in_use">Bu e-posta adresiyle kayıtlı bir hesap zaten var.</string>
+    <string name="sign_up_weak_password">Şifre çok zayıf. Daha güçlü bir şifre seçin.</string>
+
+    <string name="password_reset_title">Şifre Sıfırlama</string>
+    <string name="password_reset_prompt">Kayıtlı e-posta adresinizi girin.</string>
+    <string name="password_reset_confirm_message">Şifre sıfırlama linki %1$s adresine gönderilsin mi?</string>
+    <string name="password_reset_sent_title">E-posta Gönderildi</string>
+    <string name="password_reset_sent_message">kumbaram adresinden şifre sıfırlama bağlantısı gönderildi. Gelen kutunuzu ve spam klasörünü kontrol edin.</string>
+    <string name="password_reset_empty_email">Lütfen e-posta adresinizi girin.</string>
+    <string name="password_reset_invalid_email">Geçerli bir e-posta adresi girin.</string>
+    <string name="password_reset_user_not_found">Bu e-posta adresiyle kayıtlı bir hesap bulunamadı.</string>
+
+    <string name="error_unauthorized_user">Yetkisiz kullanıcı</string>
+    <string name="error_no_session">Oturum bulunamadı</string>
+    <string name="error_user_not_found">Kullanıcı bulunamadı</string>
+    <string name="error_business_not_found">İşletme bulunamadı</string>
+    <string name="error_sign_out_failed">Çıkış yapılamadı</string>
+    <!-- endregion -->
+
+    <!-- region Kayıt -->
+    <string name="sign_up_title">Kayıt Ol</string>
+    <string name="sign_up_name_hint">İsim</string>
+    <string name="sign_up_password_confirm_hint">Şifre Tekrar</string>
+    <string name="sign_up_invite_prompt">Davet kodun varsa tıkla</string>
+    <string name="sign_up_success_message">Kayıt işlemi tamamlandı</string>
+    <string name="validation_all_fields_required">Tüm alanlar zorunlu</string>
+    <string name="validation_passwords_do_not_match">Şifreler eşleşmiyor</string>
+
+    <string name="invite_code_title">Davet Kodu</string>
+    <string name="invite_code_message">İşletme hesabı için davet kodunu gir</string>
+    <string name="invite_code_hint">Davet kodu</string>
+    <string name="invite_code_empty">Lütfen davet kodu giriniz.</string>
+
+    <string name="business_sign_up_title">İşletme Kaydı</string>
+    <string name="business_sign_up_name_hint">İşletme Adı</string>
+    <string name="business_sign_up_phone_hint">Telefon Numarası</string>
+    <string name="business_sign_up_type_hint">İşletme Türü</string>
+    <!-- endregion -->
+
+    <!-- region KVKK -->
+    <string name="kvkk_consent_checkbox">KVKK Aydınlatma Metni\'ni okudum ve kabul ediyorum.</string>
+    <string name="kvkk_link_text">KVKK Aydınlatma Metni</string>
+    <string name="kvkk_read_action">Oku</string>
+    <string name="kvkk_policy_title">KVKK Aydınlatma Metni</string>
+    <string name="kvkk_consent_required">Devam edebilmek için KVKK aydınlatma metnini okuyup onaylamanız gerekir.</string>
+    <string name="kvkk_oauth_message">Hesabınızı oluşturmadan önce KVKK aydınlatma metnini okuyup onaylamanız gerekir.</string>
+    <string name="kvkk_oauth_complete">Kaydı Tamamla</string>
+    <!-- endregion -->
+
+    <!-- region Hesap menüsü -->
+    <string name="account_menu">Hesap menüsü</string>
+    <string name="sign_out">Çıkış Yap</string>
+    <string name="sign_out_confirm_message">Hesabından çıkmak istediğine emin misin?</string>
+    <string name="delete_account">Hesabı Sil</string>
+    <string name="delete_account_confirm_message">Hesabın ve ilişkili verilerin kalıcı olarak silinecek. Bu işlem geri alınamaz.</string>
+    <string name="delete_account_main_admin">Ana yönetici hesabı uygulama üzerinden silinemez.</string>
+    <string name="delete_account_requires_recent_login">Güvenlik nedeniyle hesabını silmek için önce çıkış yapıp tekrar giriş yapman gerekiyor.</string>
+    <!-- endregion -->
+
+    <!-- region Sekmeler -->
+    <string name="tab_home">Anasayfa</string>
+    <string name="tab_create">Oluştur</string>
+    <string name="tab_rewards">Ödüller</string>
+    <string name="tab_profile">Profil</string>
+    <string name="tab_qr">QR</string>
+    <!-- endregion -->
+
+    <!-- region Müşteri anasayfa -->
+    <string name="user_home_my_businesses">İşletmelerim</string>
+    <string name="user_home_all_businesses">Tüm İşletmeler</string>
+    <string name="user_home_my_businesses_empty">Henüz kayıtlı olduğun bir işletme yok. QR kod okutarak puan kazanabilirsin.</string>
+    <string name="user_home_all_businesses_empty">Şu an listelenecek aktif işletme bulunmuyor.</string>
+    <string name="user_home_notifications">Bildirimler</string>
+    <string name="business_fallback_name">İşletme</string>
+    <string name="points_badge">%1$d puan</string>
+    <!-- endregion -->
+
+    <!-- region Ödül listesi (müşteri) -->
+    <string name="point_earning_rules_title">Puan Kazanma Kuralları</string>
+    <string name="point_earning_rules_empty">Henüz puan kazanma kuralı eklenmedi.</string>
+    <string name="reward_list_empty_title">Henüz ödül yok</string>
+    <string name="reward_list_empty_message">Bu işletme ödüllerini tanımladığında burada görünecek. Puan toplamaya devam et.</string>
+    <string name="reward_required_points">%1$d puan</string>
+    <!-- endregion -->
+
+    <!-- region Bildirimler (müşteri) -->
+    <string name="user_notifications_title">Bildirimler</string>
+    <string name="user_notifications_empty_title">Henüz bildirim yok</string>
+    <string name="user_notifications_empty_message">Puan topladığın işletmeler kampanya duyurduğunda bildirimler burada görünecek.</string>
+    <string name="user_notifications_error_title">Bildirimler yüklenemedi</string>
+    <string name="notification_detail_format">%1$s • %2$s</string>
+
+    <string name="notification_channel_name">Kampanya bildirimleri</string>
+    <string name="notification_channel_description">Puan topladığın işletmelerin kampanya duyuruları</string>
+    <string name="notification_permission_rationale">Kampanya duyurularını kaçırmamak için bildirim izni vermen gerekiyor.</string>
+    <!-- endregion -->
+
+    <!-- region QR okutma (müşteri) -->
+    <string name="qr_scanner_hint">QR kodu çerçeve içine hizala</string>
+    <string name="qr_scanner_processing">Puan işleniyor…</string>
+    <string name="qr_scan_error_title">QR okunamadı</string>
+    <string name="qr_error_invalid">Geçersiz QR kod</string>
+    <string name="qr_error_already_used">Bu QR kod daha önce kullanılmış</string>
+    <string name="qr_error_expired">QR kodunun süresi dolmuş</string>
+    <string name="qr_error_insufficient_points">Yetersiz puan</string>
+    <string name="qr_success_message">Puan eklendi. Toplam puanın %1$d.</string>
+
+    <string name="camera_permission_title">Kamera İzni Gerekli</string>
+    <string name="camera_permission_message">QR kod okutabilmek için kamera izni vermeniz gerekiyor.</string>
+    <string name="camera_permission_settings">Ayarlar</string>
+    <string name="camera_unavailable">Kamera başlatılamadı. Lütfen tekrar dene.</string>
+    <!-- endregion -->
+
+    <!-- region İşletme anasayfa (QR üretme) -->
+    <string name="admin_home_title">Anasayfa</string>
+    <string name="admin_home_selection_caption">Verilecek puan veya ödül</string>
+    <string name="admin_home_selection_empty">Seçim yapılmadı</string>
+    <string name="admin_home_qr_placeholder_title">Henüz QR yok</string>
+    <string name="admin_home_qr_placeholder_message">Yukarıdan bir puan ya da ödül seçerek başla.</string>
+    <string name="admin_home_qr_ready_title">QR oluşturmaya hazır</string>
+    <string name="admin_home_qr_ready_message">Aşağıdaki butona dokun, müşterin okutsun.</string>
+    <string name="admin_home_generate_qr">QR Oluştur</string>
+    <string name="admin_home_qr_active">QR Aktif (%1$d sn)</string>
+    <string name="admin_home_qr_preparing">QR hazırlanıyor…</string>
+    <string name="admin_home_qr_failed_title">QR oluşturulamadı</string>
+    <string name="admin_home_qr_image_failed">Görsel hazırlanamadı. Lütfen tekrar dene.</string>
+    <string name="admin_home_qr_payload_failed">QR içeriği oluşturulamadı</string>
+    <string name="admin_home_inactive_subscription">Hesabınızı aktifleştirmek için lütfen yetkili biriyle iletişime geçin</string>
+
+    <string name="admin_home_action_title">İşlem Seç</string>
+    <string name="admin_home_action_message">Nasıl devam etmek istiyorsun?</string>
+    <string name="admin_home_action_give_reward">Ödül Ver</string>
+    <string name="admin_home_action_manual_points">Elle Puan Gir</string>
+    <string name="admin_home_points_dialog_title">Puan Gir</string>
+    <string name="admin_home_points_dialog_message">Eklenecek (+) puanı gir</string>
+    <string name="admin_home_points_dialog_hint">Örn: 10</string>
+    <string name="admin_home_points_invalid_title">Puan geçersiz</string>
+    <string name="admin_home_points_invalid_message">Lütfen 1 veya daha büyük bir tam sayı gir.</string>
+    <string name="admin_home_selection_points">+%1$d puan</string>
+    <string name="admin_home_selection_reward">%1$s · −%2$d puan</string>
+    <!-- endregion -->
+
+    <!-- region İşletme ödül/bildirim listesi -->
+    <string name="admin_panel_rewards_title">Ödüller</string>
+    <string name="admin_panel_select_reward_title">Ödül Seç</string>
+    <string name="admin_panel_segment_rewards">Ödüller</string>
+    <string name="admin_panel_segment_notifications">Bildirimler</string>
+
+    <string name="admin_panel_rewards_empty_manage_title">Henüz ödül yok</string>
+    <string name="admin_panel_rewards_empty_manage_message">Müşterilerinin puanlarıyla alabileceği ilk ödülü tanımlayarak başla.</string>
+    <string name="admin_panel_rewards_empty_manage_action">Ödül Oluştur</string>
+    <string name="admin_panel_rewards_empty_select_title">Verilecek ödül yok</string>
+    <string name="admin_panel_rewards_empty_select_message">Önce Oluştur sekmesinden bir ödül tanımla, sonra buradan müşterine verebilirsin.</string>
+    <string name="admin_panel_notifications_empty_title">Henüz bildirim göndermedin</string>
+    <string name="admin_panel_notifications_empty_message">Kampanyalarını duyurmak için müşterilerine bildirim gönderebilirsin.</string>
+    <string name="admin_panel_notifications_empty_action">Bildirim Gönder</string>
+    <string name="admin_panel_list_error_title">Liste yüklenemedi</string>
+
+    <string name="delete_confirm_title">Silme Onayı</string>
+    <string name="delete_reward_confirm_message">Bu ödülü silmek istediğine emin misin?</string>
+    <string name="delete_notification_confirm_message">“%1$s” bildirimini silmek istediğine emin misin?</string>
+
+    <string name="notification_status_no_recipients">Kayıtlı kullanıcı yok</string>
+    <string name="notification_status_no_tokens">Cihaz token\'ı yok</string>
+    <string name="notification_status_sent">%1$d cihaza gönderildi</string>
+    <string name="notification_status_default">%1$d gönderim</string>
+    <!-- endregion -->
+
+    <!-- region Ödül / bildirim oluşturma -->
+    <string name="create_segment_reward">Ödül</string>
+    <string name="create_segment_notification">Bildirim</string>
+    <string name="create_reward_title">Ödül Oluştur</string>
+    <string name="create_notification_title">Bildirim Gönder</string>
+
+    <string name="create_reward_image_title">Ödül görseli</string>
+    <string name="create_reward_image_hint_add">Eklemek için dokun</string>
+    <string name="create_reward_image_hint_change">Değiştirmek için dokun</string>
+    <string name="create_reward_name_label">Ödül adı</string>
+    <string name="create_reward_name_hint">Örn. Bedava filtre kahve</string>
+    <string name="create_reward_description_label">Açıklama</string>
+    <string name="create_reward_description_hint">Müşteri ne kazanıyor?</string>
+    <string name="create_reward_points_label">Gerekli puan</string>
+    <string name="create_reward_points_hint">Örn. 10</string>
+    <string name="create_reward_action">Ödül Oluştur</string>
+    <string name="create_reward_success">Ödül oluşturuldu</string>
+    <string name="create_reward_error_title">Ödül oluşturulamadı</string>
+    <string name="create_reward_invalid_input">Tüm alanları doldurun</string>
+
+    <string name="create_notification_header">Push bildirimi</string>
+    <string name="create_notification_hint">Tüm müşterilerine anlık bildirim gider.</string>
+    <string name="create_notification_title_label">Başlık</string>
+    <string name="create_notification_title_hint">Örn. Bu hafta çift puan</string>
+    <string name="create_notification_body_label">Mesaj</string>
+    <string name="create_notification_body_hint">Müşterilerine ne söylemek istersin?</string>
+    <string name="create_notification_action">Bildirim Gönder</string>
+    <string name="create_notification_error_title">Bildirim gönderilemedi</string>
+    <string name="create_notification_invalid_input">Başlık ve mesaj alanlarını doldurun</string>
+
+    <string name="photo_permission_title">Fotoğraf İzni Gerekli</string>
+    <string name="photo_permission_message">Galeriden fotoğraf seçebilmek için izin vermeniz gerekiyor.</string>
+    <!-- endregion -->
+
+    <!-- region İşletme profili -->
+    <string name="admin_profile_title">Profil</string>
+    <string name="admin_profile_change_logo">Logoyu değiştir</string>
+    <string name="admin_profile_month_summary">Bu ay ne kazandın · %1$s</string>
+    <string name="admin_profile_month_summary_subtitle">Yeni ve geri dönen müşterilerin özeti</string>
+    <string name="admin_profile_new_customer">Yeni müşteri</string>
+    <string name="admin_profile_new_customer_subtitle">Bu ay ilk kez</string>
+    <string name="admin_profile_returning_customer">Geri dönen</string>
+    <string name="admin_profile_returning_customer_subtitle">Bu ay tekrar gelen</string>
+    <string name="admin_profile_post_notification">Bildirim sonrası</string>
+    <string name="admin_profile_post_notification_subtitle">48 saatte QR</string>
+
+    <string name="admin_profile_performance">Performans</string>
+    <string name="admin_profile_performance_subtitle">Güncellemek için sayfayı aşağı çek</string>
+    <string name="admin_profile_section_loyalty">Sadakat</string>
+    <string name="admin_profile_active_customers">Aktif müşteri (30 gün)</string>
+    <string name="admin_profile_total_customers">Toplam müşteri</string>
+    <string name="admin_profile_average_return">Ortalama geri dönüş</string>
+    <string name="admin_profile_section_rewards">Ödül &amp; Fırsat</string>
+    <string name="admin_profile_total_rewards_given">Verilen toplam ödül</string>
+    <string name="admin_profile_one_point_away">Ödülüne 1 puan kala</string>
+    <string name="admin_profile_section_all_time">Tüm zamanlar</string>
+    <string name="admin_profile_total_points">Toplam dağıtılan puan</string>
+    <string name="admin_profile_qr_scanners">QR okutan müşteri</string>
+    <string name="admin_profile_rewards_distributed">Dağıtılan ödül sayısı</string>
+    <string name="admin_profile_top_recipient">En çok ödül alan kişi</string>
+
+    <string name="admin_profile_section_business">İşletme</string>
+    <string name="admin_profile_rules_hint">Müşterileriniz bu metni işletme sayfanızda görür.</string>
+    <string name="admin_profile_stats_error">Veriler güncellenemedi. Bağlantını kontrol et.</string>
+
+    <string name="stat_days">%1$d gün</string>
+    <string name="stat_customers">%1$s müşteri</string>
+    <string name="stat_rewards">%1$d ödül</string>
+    <string name="stat_top_recipient">%1$s (%2$d)</string>
+    <string name="stat_post_notification_subtitle_sent">Son bildirimden sonraki 48 saat</string>
+    <string name="stat_post_notification_subtitle_none">Henüz bildirim gönderilmedi</string>
+    <!-- endregion -->
+
+    <!-- region Abonelik / ödeme -->
+    <string name="subscription_title">Abonelik</string>
+    <string name="subscription_active_title">Aboneliğiniz aktif</string>
+    <string name="subscription_active_message">Uygulamayı kullanmaya devam edebilirsiniz.</string>
+    <string name="subscription_expired_title">Abonelik süreniz doldu</string>
+    <string name="subscription_expired_message">Ödeme yaparak kumbaram işletme panelini tekrar kullanabilirsiniz.</string>
+    <string name="subscription_no_date">Abonelik tarihi tanımlı değil</string>
+    <string name="subscription_days_remaining">%1$d gün kaldı</string>
+    <string name="subscription_last_day">Son gün</string>
+    <string name="subscription_expired_days_ago">%1$d gün önce doldu</string>
+    <string name="subscription_expired_short">Süreniz doldu</string>
+    <string name="subscription_expiry_date">Bitiş tarihi: %1$s</string>
+    <string name="subscription_end_date">Bitiş: %1$s</string>
+    <string name="subscription_status_active">Aktif abonelik</string>
+    <string name="subscription_status_inactive">Pasif abonelik</string>
+    <string name="subscription_passive">Pasif</string>
+
+    <string name="payment_label_phone">Telefon</string>
+    <string name="payment_label_price">Fiyat</string>
+    <string name="payment_label_description">Açıklama</string>
+    <string name="payment_contact_description">Detaylar için iletişime geçiniz.</string>
+    <string name="payment_whatsapp">WhatsApp ile İletişime Geç</string>
+    <string name="payment_check_status">Durumu Kontrol Et</string>
+    <string name="payment_status_button">Ödeme Durumu</string>
+    <string name="whatsapp_not_found_title">WhatsApp bulunamadı</string>
+    <string name="whatsapp_not_found_message">Mesaj göndermek için cihazınızda WhatsApp yüklü olmalıdır.</string>
+    <!-- endregion -->
+
+    <!-- region Ana admin -->
+    <string name="main_admin_title">Yönetim</string>
+    <string name="main_admin_invite_subtitle">İşletme kaydı için paylaş</string>
+    <string name="main_admin_generate_invite">Davet Kodu Oluştur</string>
+    <string name="main_admin_invite_copied">Davet kodu panoya kopyalandı</string>
+    <string name="main_admin_invite_nothing_to_copy">Kopyalanacak davet kodu yok.</string>
+    <string name="main_admin_businesses">İşletmeler</string>
+    <string name="main_admin_businesses_empty_title">Henüz kayıtlı işletme yok</string>
+    <string name="main_admin_businesses_empty_message">Oluşturduğun davet kodunu paylaştığında kaydolan işletmeler burada listelenecek.</string>
+
+    <string name="main_admin_extend">+30 Gün Uzat</string>
+    <string name="main_admin_shorten">-30 Gün Kısalt</string>
+    <string name="main_admin_cancel_subscription">Aboneliği İptal Et</string>
+    <string name="main_admin_cancel_confirm_message">Bu işletmenin aboneliği iptal edilecek ve uygulamaya erişimi kapanacak. Devam edilsin mi?</string>
+    <string name="main_admin_cancel_confirm_action">İptal Et</string>
+    <!-- endregion -->
+
+    <!-- region İçerik açıklamaları (erişilebilirlik) -->
+    <string name="cd_app_logo">Kumbaram logosu</string>
+    <string name="cd_business_logo">İşletme logosu</string>
+    <string name="cd_reward_image">Ödül görseli</string>
+    <string name="cd_qr_code">Oluşturulan QR kodu</string>
+    <string name="cd_notifications">Bildirimler</string>
+    <string name="cd_coin">Puan simgesi</string>
+    <!-- endregion -->
 </resources>
