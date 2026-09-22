@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sectionHeaderTextView"
+    style="@style/Widget.Kumbaram.Text.SectionHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_md"
+    android:paddingTop="@dimen/space_lg"
+    android:paddingBottom="@dimen/space_sm"
+    tools:text="İŞLETMELERİM" />

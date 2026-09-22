@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Kumbaram.Card.Clickable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/space_md"
+    android:layout_marginBottom="@dimen/space_sm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_md">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="@dimen/list_thumbnail"
+            android:layout_height="@dimen/list_thumbnail"
+            android:background="@drawable/bg_image_placeholder"
+            android:contentDescription="@string/cd_business_logo"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_md"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/TextAppearance.Kumbaram.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="KAFE ADI" />
+
+            <TextView
+                android:id="@+id/typeTextView"
+                style="@style/TextAppearance.Kumbaram.Footnote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xxs"
+                android:textColor="@color/secondary_text"
+                tools:text="Kafe" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pointsTextView"
+            style="@style/Widget.Kumbaram.PointsBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_xs"
+            android:visibility="gone"
+            tools:text="120 puan"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:layout_width="@dimen/icon_sm"
+            android:layout_height="@dimen/icon_sm"
+            android:layout_marginStart="@dimen/space_xs"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="@color/tertiary_text" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

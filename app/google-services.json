@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "849412597288",
+    "project_id": "saasproject-23a1f",
+    "storage_bucket": "saasproject-23a1f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:849412597288:android:cf5b08c308b34dc82df71d",
+        "android_client_info": {
+          "package_name": "murat.com.saasproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "849412597288-pluttibmoa1aao544oork439oehop1pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADLDaVaW17UvlsNA1ja_YpwBkfpToheNk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "849412597288-pluttibmoa1aao544oork439oehop1pn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "849412597288-3ruovpu733gkh5v0qe3nsmskqsu7ldmr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "murat.com.SAASProject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

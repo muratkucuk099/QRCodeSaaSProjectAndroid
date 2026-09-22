@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    IOS davranışı: hesap işlemleri soldan açılan bir yan menüde (AccountSideMenuViewController).
+    ANDROID karşılığı: bottom sheet. Android'de tek elle erişilebilir ve platformun
+    beklenen kalıbıdır; yan menü (drawer) ise ana navigasyon için ayrılmıştır.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/space_lg"
+    android:paddingTop="@dimen/space_lg"
+    android:paddingBottom="@dimen/space_lg">
+
+    <TextView
+        style="@style/TextAppearance.Kumbaram.Title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/brand_name" />
+
+    <TextView
+        android:id="@+id/accountEmailTextView"
+        style="@style/TextAppearance.Kumbaram.Footnote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xxs"
+        android:textColor="@color/secondary_text"
+        android:visibility="gone"
+        tools:ignore="MissingPrefix"
+        xmlns:tools="http://schemas.android.com/tools" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signOutButton"
+        style="@style/Widget.Kumbaram.Button.Outline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/space_lg"
+        android:text="@string/sign_out" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleteAccountButton"
+        style="@style/Widget.Kumbaram.Button.Text.Destructive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/min_touch_target"
+        android:layout_marginTop="@dimen/space_xs"
+        android:text="@string/delete_account" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/accountProgress"
+        style="@style/Widget.Kumbaram.ProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/space_sm"
+        android:indeterminate="true"
+        android:visibility="gone" />
+</LinearLayout>

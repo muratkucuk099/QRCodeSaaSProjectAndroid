@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- iOS `AppColor.swift` karanlık mod değerleri. -->
+<resources>
+    <color name="primary">#B6B9FF</color>
+    <color name="primary_subtle">#2A2836</color>
+
+    <color name="screen_background">#131211</color>
+    <color name="secondary_background">#1A1917</color>
+    <color name="surface">#1F1E1B</color>
+    <color name="elevated_surface">#282621</color>
+    <color name="image_placeholder">#2B2925</color>
+
+    <color name="primary_text">#F4F2EE</color>
+    <color name="secondary_text">#A5A29B</color>
+    <color name="tertiary_text">#77746D</color>
+    <color name="inverse_text">#1A1A1C</color>
+
+    <color name="border">#322F2A</color>
+    <color name="separator">#322F2A</color>
+
+    <color name="success">#5FD394</color>
+    <color name="success_subtle">#14291E</color>
+    <color name="warning">#F2B457</color>
+    <color name="warning_subtle">#2E2311</color>
+    <color name="error">#F2B8B5</color>
+    <color name="error_subtle">#2E1615</color>
+</resources>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Widget.Kumbaram.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/tab_create" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/modeToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/space_md"
+            android:layout_marginTop="@dimen/space_sm"
+            app:checkedButton="@id/rewardModeButton"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rewardModeButton"
+                style="@style/Widget.Kumbaram.Button.Outline"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/compact_button_height"
+                android:layout_weight="1"
+                android:text="@string/create_segment_reward" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/notificationModeButton"
+                style="@style/Widget.Kumbaram.Button.Outline"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/compact_button_height"
+                android:layout_weight="1"
+                android:text="@string/create_segment_notification" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_md">
+
+                <LinearLayout
+                    android:id="@+id/rewardForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/imageCard"
+                        style="@style/Widget.Kumbaram.Card.Clickable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/space_md">
+
+                            <ImageView
+                                android:id="@+id/rewardImageView"
+                                android:layout_width="@dimen/form_thumbnail"
+                                android:layout_height="@dimen/form_thumbnail"
+                                android:background="@drawable/bg_image_placeholder"
+                                android:contentDescription="@string/cd_reward_image"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_photo" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/space_md"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/TextAppearance.Kumbaram.Headline"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/create_reward_image_title" />
+
+                                <TextView
+                                    android:id="@+id/imageHintTextView"
+                                    style="@style/TextAppearance.Kumbaram.Footnote"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/create_reward_image_hint_add" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nameInputLayout"
+                        style="@style/Widget.Kumbaram.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:hint="@string/create_reward_name_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nameEditText"
+                            style="@style/Widget.Kumbaram.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/descriptionInputLayout"
+                        style="@style/Widget.Kumbaram.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:hint="@string/create_reward_description_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/descriptionEditText"
+                            style="@style/Widget.Kumbaram.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:minLines="3" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/pointsInputLayout"
+                        style="@style/Widget.Kumbaram.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:hint="@string/create_reward_points_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pointsEditText"
+                            style="@style/Widget.Kumbaram.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/createRewardButton"
+                        style="@style/Widget.Kumbaram.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/space_lg"
+                        android:text="@string/create_reward_action" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/notificationForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextAppearance.Kumbaram.Headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/create_notification_header" />
+
+                    <TextView
+                        style="@style/TextAppearance.Kumbaram.Subheadline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:text="@string/create_notification_hint" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/notificationTitleInputLayout"
+                        style="@style/Widget.Kumbaram.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:hint="@string/create_notification_title_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/notificationTitleEditText"
+                            style="@style/Widget.Kumbaram.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapSentences" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/notificationBodyInputLayout"
+                        style="@style/Widget.Kumbaram.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:hint="@string/create_notification_body_hint">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/notificationBodyEditText"
+                            style="@style/Widget.Kumbaram.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:minLines="4" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sendNotificationButton"
+                        style="@style/Widget.Kumbaram.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="@dimen/space_lg"
+                        android:text="@string/create_notification_action" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loadingOverlay"
+        layout="@layout/view_loading_overlay"
+        android:visibility="gone" />
+</FrameLayout>

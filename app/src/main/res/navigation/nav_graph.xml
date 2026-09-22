@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="murat.com.saasproject.ui.auth.SplashFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_splash" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="murat.com.saasproject.ui.auth.LoginFragment"
+        android:label="@string/login_action">
+        <action
+            android:id="@+id/action_login_to_userSignUp"
+            app:destination="@id/userSignUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userSignUpFragment"
+        android:name="murat.com.saasproject.ui.auth.UserSignUpFragment"
+        android:label="@string/sign_up_title">
+        <action
+            android:id="@+id/action_userSignUp_to_businessSignUp"
+            app:destination="@id/businessSignUpFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/businessSignUpFragment"
+        android:name="murat.com.saasproject.ui.auth.BusinessSignUpFragment"
+        android:label="@string/business_sign_up_title" />
+
+    <fragment
+        android:id="@+id/kvkkPolicyFragment"
+        android:name="murat.com.saasproject.ui.legal.KvkkPolicyFragment"
+        android:label="@string/kvkk_policy_title" />
+
+    <fragment
+        android:id="@+id/customerHostFragment"
+        android:name="murat.com.saasproject.ui.customer.CustomerHostFragment"
+        android:label="@string/app_name" />
+
+    <fragment
+        android:id="@+id/businessHostFragment"
+        android:name="murat.com.saasproject.ui.business.BusinessHostFragment"
+        android:label="@string/app_name" />
+
+    <fragment
+        android:id="@+id/mainAdminFragment"
+        android:name="murat.com.saasproject.ui.mainadmin.MainAdminFragment"
+        android:label="@string/main_admin_title">
+        <action
+            android:id="@+id/action_mainAdmin_to_businessDetail"
+            app:destination="@id/mainAdminBusinessDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainAdminBusinessDetailFragment"
+        android:name="murat.com.saasproject.ui.mainadmin.MainAdminBusinessDetailFragment"
+        android:label="@string/main_admin_businesses">
+        <argument
+            android:name="businessId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/subscriptionGateFragment"
+        android:name="murat.com.saasproject.ui.business.subscription.BusinessPaymentFragment"
+        android:label="@string/subscription_title">
+        <argument
+            android:name="gateMode"
+            android:defaultValue="true"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

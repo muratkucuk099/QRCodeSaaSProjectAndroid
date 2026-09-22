@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/placeholderTextView"
+    style="@style/TextAppearance.Kumbaram.Subheadline"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_md"
+    android:paddingBottom="@dimen/space_md"
+    android:textColor="@color/secondary_text"
+    tools:text="Henüz kayıtlı olduğun bir işletme yok." />

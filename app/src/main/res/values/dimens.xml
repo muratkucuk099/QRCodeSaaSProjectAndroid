@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    iOS `Spacing.swift` (Spacing / CornerRadius / Metrics) karşılığı.
+    Tüm değerler dp; hiçbir layout'ta ham px kullanılmaz.
+-->
+<resources>
+    <!-- Spacing -->
+    <dimen name="space_xxs">4dp</dimen>
+    <dimen name="space_xs">8dp</dimen>
+    <dimen name="space_sm">12dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_ml">20dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="space_xxl">40dp</dimen>
+    <dimen name="space_xxxl">48dp</dimen>
+
+    <!-- Corner radius -->
+    <dimen name="radius_xs">6dp</dimen>
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">20dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+
+    <!-- Metrics -->
+    <dimen name="min_touch_target">48dp</dimen>
+    <dimen name="button_height">50dp</dimen>
+    <dimen name="compact_button_height">36dp</dimen>
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="hairline">1dp</dimen>
+
+    <dimen name="icon_xs">16dp</dimen>
+    <dimen name="icon_sm">20dp</dimen>
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_lg">32dp</dimen>
+    <dimen name="icon_xl">44dp</dimen>
+
+    <dimen name="avatar">44dp</dimen>
+    <dimen name="list_thumbnail">56dp</dimen>
+    <dimen name="form_thumbnail">64dp</dimen>
+    <dimen name="profile_avatar">72dp</dimen>
+
+    <!-- Ekrana özel ölçüler -->
+    <dimen name="brand_logo_height">96dp</dimen>
+    <dimen name="qr_image_size">240dp</dimen>
+    <dimen name="side_menu_width">300dp</dimen>
+    <dimen name="empty_state_icon">56dp</dimen>
+
+    <!-- Text sizes (iOS AppFont.swift) -->
+    <dimen name="text_large_title">34sp</dimen>
+    <dimen name="text_title1">28sp</dimen>
+    <dimen name="text_title2">22sp</dimen>
+    <dimen name="text_title3">18sp</dimen>
+    <dimen name="text_headline">17sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_callout">15sp</dimen>
+    <dimen name="text_subheadline">14sp</dimen>
+    <dimen name="text_footnote">13sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+</resources>

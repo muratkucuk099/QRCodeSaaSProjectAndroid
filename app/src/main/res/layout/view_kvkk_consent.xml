@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    iOS `KVKKConsentView` karşılığı: onay kutusu + aydınlatma metnine giden bağlantı.
+    Kayıt ekranlarında `include` ile kullanılır.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/kvkkCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/min_touch_target"
+        android:minHeight="@dimen/min_touch_target"
+        android:text="@string/kvkk_consent_checkbox"
+        android:textAppearance="@style/TextAppearance.Kumbaram.Footnote"
+        android:textColor="@color/secondary_text" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/kvkkPolicyButton"
+        style="@style/Widget.Kumbaram.Button.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/kvkk_policy_title"
+        android:minWidth="@dimen/min_touch_target"
+        android:text="@string/kvkk_read_action" />
+</LinearLayout>

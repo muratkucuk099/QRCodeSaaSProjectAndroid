@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    StateLayout'un iç içeriği. Yükleniyor / boş / hata durumlarını tek yerde toplar,
+    böylece her ekranda aynı görsel dil tekrarlanmadan kullanılabilir.
+-->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/stateProgress"
+        style="@style/Widget.Kumbaram.ProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/stateMessageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/space_xl"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/stateIcon"
+            android:layout_width="@dimen/empty_state_icon"
+            android:layout_height="@dimen/empty_state_icon"
+            android:layout_marginBottom="@dimen/space_md"
+            android:importantForAccessibility="no"
+            app:tint="@color/tertiary_text"
+            tools:src="@drawable/ic_wifi_error" />
+
+        <TextView
+            android:id="@+id/stateTitle"
+            style="@style/TextAppearance.Kumbaram.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="Bağlantı kurulamadı" />
+
+        <TextView
+            android:id="@+id/stateDescription"
+            style="@style/TextAppearance.Kumbaram.Subheadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xs"
+            android:gravity="center"
+            android:textColor="@color/secondary_text"
+            tools:text="Bağlantını kontrol edip tekrar dene." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/stateActionButton"
+            style="@style/Widget.Kumbaram.Button.Outline"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_ml"
+            android:visibility="gone"
+            tools:text="Tekrar Dene"
+            tools:visibility="visible" />
+    </LinearLayout>
+</merge>

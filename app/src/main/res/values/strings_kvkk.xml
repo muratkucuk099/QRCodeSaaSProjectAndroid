@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    iOS `KVKKPolicy.fullText` karşılığı. Metin birebir korundu; yalnızca değişkenler
+    biçim argümanlarına çevrildi:
+      %1$s uygulama adı, %2$s son güncelleme tarihi, %3$s metin sürümü,
+      %4$s veri sorumlusu, %5$s iletişim e-postası, %6$s destek adresi.
+-->
+<resources>
+    <string name="kvkk_policy_full_text">%1$s KİŞİSEL VERİLERİN KORUNMASI AYDINLATMA METNİ
+(6698 Sayılı Kişisel Verilerin Korunması Kanunu – Madde 10)
+
+Son güncelleme: %2$s
+Metin sürümü: %3$s
+
+1. VERİ SORUMLUSU
+%4$s, %1$s mobil uygulaması kapsamında kişisel verileriniz veri sorumlusu sıfatıyla aşağıda açıklanan çerçevede işlenmektedir.
+
+İletişim: %5$s
+Destek: %6$s
+
+2. İŞLENEN KİŞİSEL VERİLER
+Uygulamayı kullanım şeklinize göre aşağıdaki veriler işlenebilir:
+\u2022 Kimlik ve iletişim bilgileri (ad, soyad, e-posta, telefon)
+\u2022 Hesap ve kimlik doğrulama bilgileri (Firebase Authentication kayıtları, Google oturum bilgileri)
+\u2022 İşletme bilgileri (işletme adı, türü, logo, onay durumu)
+\u2022 Sadakat ve işlem bilgileri (puan bakiyesi, QR işlemleri, ödül kullanımları)
+\u2022 Bildirim tercihleri ve cihaz bildirim anahtarı (push token)
+\u2022 Teknik veriler (cihaz modeli, işletim sistemi, uygulama sürümü, hata kayıtları)
+
+3. KİŞİSEL VERİLERİN İŞLENME AMAÇLARI
+Kişisel verileriniz;
+\u2022 Üyelik oluşturma ve oturum açma,
+\u2022 İşletmelerle sadakat programı kapsamında puan kazanımı ve ödül kullanımı,
+\u2022 İşletme yönetim paneli ve istatistik hizmetlerinin sunulması,
+\u2022 Bildirim gönderimi,
+\u2022 Bilgi güvenliği, dolandırıcılık önleme ve teknik destek,
+\u2022 Mevzuattan doğan yükümlülüklerin yerine getirilmesi
+amaçlarıyla işlenmektedir.
+
+4. HUKUKİ SEBEPLER
+Kişisel verileriniz KVKK’nın 5. maddesinde belirtilen;
+\u2022 Bir sözleşmenin kurulması veya ifası,
+\u2022 Veri sorumlusunun meşru menfaati,
+\u2022 Açık rızanızın bulunması (push bildirimleri vb.),
+\u2022 Hukuki yükümlülüklerin yerine getirilmesi
+hukuki sebeplerine dayanılarak işlenebilir.
+
+5. TOPLAMA YÖNTEMİ
+Verileriniz; kayıt formları, uygulama içi işlemler, QR kod okuma, otomatik teknik kayıtlar ve entegre hizmet sağlayıcıları aracılığıyla elektronik ortamda toplanmaktadır.
+
+6. AKTARIM
+Hizmetin sunulması için verileriniz yurt içinde ve/veya yurt dışında bulunan aşağıdaki taraflarla paylaşılabilir:
+\u2022 Google Firebase (kimlik doğrulama, veritabanı, depolama, bildirim, analitik/crash raporlama)
+\u2022 Google Sign-In hizmet sağlayıcısı
+\u2022 İlgili işletmeler (sadakat programına kayıt olduğunuz işletmeler; puan ve işlem bilgileri)
+
+Aktarımlar KVKK’nın 8. ve 9. maddelerine uygun şekilde gerçekleştirilir.
+
+7. SAKLAMA SÜRESİ
+Kişisel verileriniz, işleme amacının gerektirdiği süre boyunca ve ilgili mevzuatta öngörülen zamanaşımı süreleri kadar saklanır; süre sonunda silinir, yok edilir veya anonim hale getirilir.
+
+8. KVKK KAPSAMINDAKİ HAKLARINIZ
+KVKK’nın 11. maddesi uyarınca veri sorumlusuna başvurarak;
+\u2022 Kişisel verilerinizin işlenip işlenmediğini öğrenme,
+\u2022 İşlenmişse buna ilişkin bilgi talep etme,
+\u2022 Amacına uygun kullanılıp kullanılmadığını öğrenme,
+\u2022 Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,
+\u2022 Eksik veya yanlış işlenmişse düzeltilmesini isteme,
+\u2022 KVKK’da öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme,
+\u2022 Otomatik sistemler ile analiz sonucu aleyhinize bir sonucun ortaya çıkmasına itiraz etme,
+\u2022 Kanuna aykırı işlenmesi sebebiyle zarara uğramanız hâlinde tazminat talep etme
+haklarına sahipsiniz.
+
+9. BAŞVURU
+Taleplerinizi %5$s adresine veya %6$s destek sayfası üzerinden iletebilirsiniz. Başvurularınız en geç 30 gün içinde sonuçlandırılır.
+
+10. AÇIK RIZA
+Kayıt sırasında bu metni onaylayarak, üyelik sözleşmesinin ifası kapsamında kişisel verilerinizin yukarıda belirtilen amaçlarla işlenmesine açık rıza vermiş olursunuz.</string>
+</resources>

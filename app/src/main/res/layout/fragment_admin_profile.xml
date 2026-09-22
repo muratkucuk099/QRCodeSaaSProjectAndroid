@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Widget.Kumbaram.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_menu"
+            app:navigationContentDescription="@string/account_menu"
+            app:title="@string/tab_profile">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editSaveButton"
+                style="@style/Widget.Kumbaram.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/edit" />
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space_md">
+
+                    <ImageView
+                        android:id="@+id/logoImageView"
+                        android:layout_width="@dimen/profile_avatar"
+                        android:layout_height="@dimen/profile_avatar"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/bg_image_placeholder"
+                        android:contentDescription="@string/cd_business_logo"
+                        android:scaleType="centerCrop" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/changeLogoButton"
+                        style="@style/Widget.Kumbaram.Button.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/admin_profile_change_logo"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/nameTextView"
+                        style="@style/TextAppearance.Kumbaram.Title2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:gravity="center"
+                        tools:text="KAFE ADI" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/nameInputLayout"
+                        style="@style/Widget.Kumbaram.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:hint="@string/business_sign_up_name_hint"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/nameEditText"
+                            style="@style/Widget.Kumbaram.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textCapCharacters" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/phoneTextView"
+                        style="@style/TextAppearance.Kumbaram.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_xs"
+                        android:gravity="center"
+                        android:textColor="@color/secondary_text"
+                        tools:text="0552 554 50 09" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phoneInputLayout"
+                        style="@style/Widget.Kumbaram.TextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_sm"
+                        android:hint="@string/business_sign_up_phone_hint"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phoneEditText"
+                            style="@style/Widget.Kumbaram.TextInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Kumbaram.Card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_lg">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_md">
+
+                            <TextView
+                                android:id="@+id/subscriptionTitleTextView"
+                                style="@style/TextAppearance.Kumbaram.Headline"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/subscription_status_active" />
+
+                            <TextView
+                                android:id="@+id/subscriptionRemainingTextView"
+                                style="@style/TextAppearance.Kumbaram.Body"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_xxs"
+                                tools:text="12 gün kaldı" />
+
+                            <TextView
+                                android:id="@+id/subscriptionExpiryTextView"
+                                style="@style/TextAppearance.Kumbaram.Caption"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_xxs"
+                                tools:text="Bitiş tarihi: 12 Eylül 2026" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/openPaymentButton"
+                                style="@style/Widget.Kumbaram.Button.Outline"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_height"
+                                android:layout_marginTop="@dimen/space_md"
+                                android:text="@string/payment_status_button" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Kumbaram.Card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_md">
+
+                            <TextView
+                                android:id="@+id/monthSummaryTitle"
+                                style="@style/TextAppearance.Kumbaram.Headline"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                tools:text="Bu ay ne kazandın · Eylül" />
+
+                            <TextView
+                                style="@style/TextAppearance.Kumbaram.Caption"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_xxs"
+                                android:text="@string/admin_profile_month_summary_subtitle" />
+
+                            <include
+                                android:id="@+id/statNewCustomer"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statReturningCustomer"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statPostNotification"
+                                layout="@layout/item_stat_row" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Kumbaram.Card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_md">
+
+                            <TextView
+                                style="@style/TextAppearance.Kumbaram.Headline"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_profile_performance" />
+
+                            <TextView
+                                style="@style/TextAppearance.Kumbaram.Caption"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/space_xs"
+                                android:text="@string/admin_profile_performance_subtitle" />
+
+                            <TextView
+                                style="@style/Widget.Kumbaram.Text.SectionHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_profile_section_loyalty" />
+
+                            <include
+                                android:id="@+id/statActiveCustomers"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statTotalCustomers"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statAverageReturn"
+                                layout="@layout/item_stat_row" />
+
+                            <TextView
+                                style="@style/Widget.Kumbaram.Text.SectionHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_sm"
+                                android:text="@string/admin_profile_section_rewards" />
+
+                            <include
+                                android:id="@+id/statRewardsGiven"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statOnePointAway"
+                                layout="@layout/item_stat_row" />
+
+                            <TextView
+                                style="@style/Widget.Kumbaram.Text.SectionHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_sm"
+                                android:text="@string/admin_profile_section_all_time" />
+
+                            <include
+                                android:id="@+id/statTotalPoints"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statQrScanners"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statRewardsDistributed"
+                                layout="@layout/item_stat_row" />
+
+                            <include
+                                android:id="@+id/statTopRecipient"
+                                layout="@layout/item_stat_row" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        style="@style/Widget.Kumbaram.Card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/space_md"
+                        android:layout_marginBottom="@dimen/space_lg">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/space_md">
+
+                            <TextView
+                                style="@style/TextAppearance.Kumbaram.Headline"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admin_profile_section_business" />
+
+                            <TextView
+                                android:id="@+id/rulesTextView"
+                                style="@style/TextAppearance.Kumbaram.Body"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_sm"
+                                android:textColor="@color/secondary_text"
+                                tools:text="Her alışverişte 1 puan" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/rulesInputLayout"
+                                style="@style/Widget.Kumbaram.TextInputLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_sm"
+                                android:hint="@string/admin_profile_rules_hint"
+                                android:visibility="gone">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/rulesEditText"
+                                    style="@style/Widget.Kumbaram.TextInputEditText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top"
+                                    android:inputType="textCapSentences|textMultiLine"
+                                    android:minLines="3" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loadingOverlay"
+        layout="@layout/view_loading_overlay"
+        android:visibility="gone" />
+</FrameLayout>

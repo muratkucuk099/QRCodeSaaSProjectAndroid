@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_customer"
+    app:startDestination="@id/userHomeFragment">
+
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="murat.com.saasproject.ui.customer.UserHomeFragment"
+        android:label="@string/tab_home">
+        <action
+            android:id="@+id/action_home_to_notifications"
+            app:destination="@id/userNotificationsFragment" />
+        <action
+            android:id="@+id/action_home_to_rewardList"
+            app:destination="@id/customerRewardListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userNotificationsFragment"
+        android:name="murat.com.saasproject.ui.customer.UserNotificationsFragment"
+        android:label="@string/user_notifications_title" />
+
+    <fragment
+        android:id="@+id/customerRewardListFragment"
+        android:name="murat.com.saasproject.ui.customer.CustomerRewardListFragment"
+        android:label="@string/tab_rewards">
+        <argument
+            android:name="businessId"
+            app:argType="string" />
+        <argument
+            android:name="points"
+            app:argType="integer" />
+        <argument
+            android:name="businessName"
+            app:argType="string" />
+    </fragment>
+</navigation>

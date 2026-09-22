@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_business"
+    app:startDestination="@id/adminMainFragment">
+
+    <fragment
+        android:id="@+id/adminMainFragment"
+        android:name="murat.com.saasproject.ui.business.AdminMainFragment"
+        android:label="@string/tab_home">
+        <action
+            android:id="@+id/action_home_to_rewardSelect"
+            app:destination="@id/rewardSelectFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/rewardSelectFragment"
+        android:name="murat.com.saasproject.ui.business.AdminPanelFragment"
+        android:label="@string/admin_panel_select_reward_title">
+        <argument
+            android:name="mode"
+            android:defaultValue="SELECT"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createFragment"
+        android:name="murat.com.saasproject.ui.business.CreateFragment"
+        android:label="@string/tab_create" />
+
+    <fragment
+        android:id="@+id/adminPanelFragment"
+        android:name="murat.com.saasproject.ui.business.AdminPanelFragment"
+        android:label="@string/tab_rewards">
+        <argument
+            android:name="mode"
+            android:defaultValue="MANAGE"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminProfileFragment"
+        android:name="murat.com.saasproject.ui.business.AdminProfileFragment"
+        android:label="@string/tab_profile">
+        <action
+            android:id="@+id/action_profile_to_payment"
+            app:destination="@id/paymentProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/paymentProfileFragment"
+        android:name="murat.com.saasproject.ui.business.subscription.BusinessPaymentFragment"
+        android:label="@string/subscription_title">
+        <argument
+            android:name="gateMode"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+</navigation>

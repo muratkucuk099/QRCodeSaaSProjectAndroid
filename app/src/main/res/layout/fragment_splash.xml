@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- iOS SplashViewController: ortada marka logosu, altında yükleniyor göstergesi. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/space_xl">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/brand_logo_height"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/cd_app_logo"
+        android:src="@drawable/app_logo" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/splashProgress"
+        style="@style/Widget.Kumbaram.ProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_xl"
+        android:indeterminate="true" />
+</LinearLayout>

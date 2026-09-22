@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Dialog içinde tek satırlık metin girişi. iOS'taki `UIAlertController.addTextField`
+    karşılığı; davet kodu ve elle puan girişi gibi kısa girdiler için kullanılır.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/space_lg"
+    android:paddingTop="@dimen/space_xs">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dialogInputLayout"
+        style="@style/Widget.Kumbaram.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dialogEditText"
+            style="@style/Widget.Kumbaram.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+</FrameLayout>
